@@ -1,0 +1,117 @@
+/* --- Fonts --- */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;700&family=Poppins:wght@700");
+@import url("https://use.fontawesome.com/releases/v6.1.1/css/all.css");
+
+/* Components -> for easy readability, you can extract component specific
+CSS selectors into their own css file and then import them into the main css file
+For example -> all card css goes into card.css and so on */
+@import url(components/avatar.css);
+@import url(components/button.css);
+@import url(components/card.css);
+@import url(components/utilities.css);
+
+body {
+  font-family: "Open Sans", "Helvetica", "sans-serif";
+  padding-bottom: 200px;
+  margin: 0;
+  background: #F4F4F4;
+}
+
+/* Utilities */
+.container {
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.list-inline {
+  list-style: none;
+  padding-left: 0px;
+  margin: 0;
+}
+
+.list-inline li {
+  display: inline-block;
+}
+
+h1, h2, h3 {
+  font-family: "Poppins", "sans-serif";
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Card */
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.card-white {
+  background-color: white;
+  border: 1px solid rgb(240, 240, 240);
+  padding: 8px;
+  width: 200px;
+}
+
+.card-white .card-white-image {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 150px;
+}
+
+.card-white .list-inline {
+  color: #B0B0B0;
+  text-align: right;
+  padding-top: 8px;
+}
+
+.card-white .list-inline li {
+  margin-left: 8px;
+}
+
+.card-white .btn {
+  opacity: 0;
+  transition: .3s;
+}
+
+.card-white:hover .btn {
+  opacity: 1;
+}
+
+.card-user {
+  margin-top: 8px;
+}
+
+/* Avatar */
+.avatar {
+  border-radius: 50%;
+  width: 30px;
+  margin-right: 8px;
+}
+
+/* Button */
+.btn {
+  background: white;
+  border: 1px solid rgb(240, 240, 240);
+  border-radius: 4px;
+  color: gray;
+  padding: 4px 8px;
+  margin: 8px;
+  display: inline-block;
+}
+
+.btn:hover {
+  color: black;
+}

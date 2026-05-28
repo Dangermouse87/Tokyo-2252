@@ -1,0 +1,18 @@
+.container {
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.list-inline {
+  list-style: none;
+  padding-left: 0px;
+  margin: 0;
+}
+
+.list-inline li {
+  display: inline-block;
+}
