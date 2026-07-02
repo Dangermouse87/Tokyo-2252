@@ -1,0 +1,17 @@
+<div class="card-trip row justify-content-center w-75 mx-auto my-2">
+  <div class="card-trip-infos col-9">
+    <div>
+      <h2><%= @flat['name'] %></h2> <!-- display flat name -->
+    </div>
+  </div>
+  <%= image_tag @flat["imageUrl"], alt: "#{@flat['name']} photo", class: "col-12 mb-2" %> <!-- display flat image -->
+  <div class="d-flex justify-content-end my-2">
+    <div class="card shadow-lg col-3 border-0 align-self-end">
+      <div class="card-body">
+        <h5 class="card-title"><strong>£<%= @flat['price'] %></strong> per night</h5> <!-- display flat price -->
+        <%= link_to "Reserve", "#", class: "btn btn-danger w-100 my-1"  %>
+        <%= link_to "Home", root_path, class: "btn w-100 my-1 border-1 border-dark"  %> <!-- link back to home page -->
+      </div>
+    </div>
+  </div>
+</div>
