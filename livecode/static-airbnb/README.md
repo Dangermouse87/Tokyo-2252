@@ -1,24 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Let’s build a simple Airbnb clone with a remote static JSON DB with a home page (index) listing flats.
 
-Things you may want to cover:
+In this challenge, the class is going to create a simple Airbnb clone with a static DB. The focus is on:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Route
+Controller & Action
+View
