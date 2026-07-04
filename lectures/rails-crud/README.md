@@ -1,24 +1,18 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Rails Active Record Basics
 
-Things you may want to cover:
+Goes through the happy path of going through the CRUD actions on a rails app.
 
-* Ruby version
+This app:
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Explains the happy path
+  - establish route
+  - implement controller action
+  - implement view
+ 
+- Also explains
+  - Creating models
+  - Database actions
+    - migrations
+    - Active Record helper methods.\
