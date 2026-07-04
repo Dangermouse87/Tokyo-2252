@@ -7,3 +7,13 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+10.times do
+  puts "Creating Restaurant"
+  Restaurant.create(
+    name: Faker::Restaurant.name,
+    address: Faker::Address.city,
+    rating: rand(1..5)
+  )
+  puts "Finished Creating Restaurant"
+end
