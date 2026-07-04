@@ -1,0 +1,35 @@
+<!-- form_for -->
+
+<!-- <%= form_for(pet) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :address %>
+  <%= f.text_field :address %>
+  <%= f.label :species %>
+  <%= f.text_field :species %>
+  <%= f.label :found_on %>
+  <%= f.date_select :found_on %>
+  <%= f.submit %>
+<% end %> -->
+
+<!-- Simple Form -->
+
+<%= simple_form_for pet, html: { class: "container mt-4" } do |f| %>
+  <%= f.input :name,
+              input_html: { class: "form-control" },
+              label_html: { class: "form-label" } %>
+  <%= f.input :address,
+              input_html: { class: "form-control" },
+              label_html: { class: "form-label" } %>
+  <%= f.input :species,
+              collection: Pet::SPECIES.sort,
+              include_blank: false,
+              input_html: { class: "form-select" },
+              label_html: { class: "form-label" } %>
+  <%= f.input :found_on,
+              as: :date,
+              html5: true,
+              input_html: { class: "form-control" },
+              label_html: { class: "form-label" } %>
+  <%= f.submit "Add", class: "btn btn-success mt-3" %>
+<% end %>

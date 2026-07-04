@@ -1,0 +1,19 @@
+<div class="container">
+  <h1>Found Pet</h1>
+  <div class="card-product">
+    <%= image_tag "#{@pet.species}.jpg", alt: @pet.species %>
+    <div class="card-product-infos">
+      <h2><%= @pet.name %></h2>
+      <p>Found near <%= @pet.address %>, <%= @pet.days_ago %> days ago</p>
+      <p>Species: <%= @pet.species.capitalize %></p>
+      <p>Found on: <%= @pet.found_on.strftime("%B %d, %Y") %></p>
+    </div>
+  </div>
+  <div class="mt-3">
+    <%= link_to "Home", pets_path, class: "btn btn-secondary" %>
+    <%= link_to pet_path(@pet), data: { turbo_method: :delete, turbo_confirm: "Return #{@pet.name} to its owner?" }, class: "btn btn-secondary" do %>
+      <i class="fa-solid fa-basket-shopping"></i>
+    <% end %>
+    <%= link_to "Update #{@pet.name}", edit_pet_path(@pet), class: "btn btn-secondary" %>
+  </div>
+</div>

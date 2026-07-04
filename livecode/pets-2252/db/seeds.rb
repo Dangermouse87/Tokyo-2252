@@ -7,3 +7,17 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+puts "Cleaning the DB..."
+Pet.destroy_all
+
+
+puts "Creating pets..."
+50.times do
+  Pet.create!(
+    name: Faker::Creature::Horse.unique.name,
+    address: Faker::Address.street_address,
+    species: Pet::SPECIES.sample,
+    found_on: Date.today - rand(1..10)
+  )
+end
+puts "... created #{Pet.count} pets."

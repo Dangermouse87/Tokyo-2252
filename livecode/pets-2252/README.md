@@ -1,24 +1,61 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Lost Pets
 
-Things you may want to cover:
+Today, we are going to create a app that will help us report lost pets.
 
-* Ruby version
+The goal of today is to rehearse the 7 CRUD routes that we worked on today:
 
-* System dependencies
+GET index (all)
+GET show (find(id))
+GET new
+POST create
+GET edit
+PATCH update
+DELETE destroy
 
-* Configuration
+The 5 user stories that we want to implement are:
 
-* Database creation
+- As a user I can see all found pets
+- As a user I can see details about one found pet (when and where it was found)
+- As a user I can add a pet I found
+- As a user I can update a pet
+- As a user I can delete a pet
 
-* Database initialization
+1) Create the pets model
 
-* How to run the test suite
+- attributes
+  - name
+  - address
+  - species
+  - when was it found
 
-* Services (job queues, cache servers, search engines, etc.)
+- validations
+  - it has to have a name
+  - species have to be from predetermined list
 
-* Deployment instructions
+2) User Stories
 
-* ...
+2a - Index
+  - Route
+  - Controller Action
+  - View
+
+2b - Show
+  - Route
+  - Controller Action
+  - View
+
+2c - New / Create
+  - Route
+  - Controller Action
+  - View
+
+2d - Destroy
+  - Route
+  - Controller
+
+2e - Edit / Update
+  - Route
+  - Controller Action
+  - View

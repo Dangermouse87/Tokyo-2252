@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>Found Pets</h1>
+  <%= link_to "Add a new pet", new_pet_path, class: "btn btn-primary mb-2" %>
+  <div class="cards">
+    <% @pets.each do |pet| %>
+      <%= link_to pet_path(pet), class: 'text-dark text-decoration-none' do %>
+        <div class="card-product">
+          <%= image_tag "#{pet.species}.jpg", alt: "text" %>
+          <div class="card-product-infos">
+            <h2><%= pet.name %></h2>
+            <p>Found near <%= pet.address %> <%= pet.days_ago %> days ago</p>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
