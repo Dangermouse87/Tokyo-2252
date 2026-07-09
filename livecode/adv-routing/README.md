@@ -30,3 +30,5 @@ Loop this 2 times
 4. Routes (new, create, destroy) -> think about this!
 5. Controller Actions
 6. Display / Views
+
+Don't forget to bundle install if you want to check out the code on your local server.
