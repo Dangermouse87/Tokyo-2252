@@ -8,6 +8,9 @@ class ParksController < ApplicationController
 
   # GET /parks/1
   def show
+    @dinosaurs = @park.dinosaurs
+    # Calling Dinosaur.new here allows you to create new dinosaurs from the Park Show
+    @dinosaur = Dinosaur.new
   end
 
   # GET /parks/new

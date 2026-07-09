@@ -3,3 +3,59 @@
     <h1><%= @park.name %></h1>
   </div>
 </div>
+
+<div class="container mt-4">
+  <%= link_to root_path, class: "btn btn-outline-secondary" do %>
+    <i class="fa-solid fa-arrow-left me-2"></i>Back to all parks
+  <% end %>
+</div>
+
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-6 col-md-8">
+      <div class="dino-form-card shadow-sm">
+        <h4 class="dino-form-title">
+          <i class="fa-solid fa-plus-circle me-2"></i>Give a dino a new home
+        </h4>
+        <%= simple_form_for [@park, @dinosaur] do |f| %>
+          <div class="dino-field">
+            <%= f.label :name, class: "dino-field__label" %>
+            <div class="input-group">
+              <span class="input-group-text"><i class="fa-solid fa-dragon"></i></span>
+              <%= f.input_field :name, placeholder: "Doyouthinkhesaurus", class: "form-control" %>
+            </div>
+          </div>
+          <div class="dino-field">
+            <%= f.label :image_url, class: "dino-field__label" %>
+            <div class="input-group">
+              <span class="input-group-text"><i class="fa-solid fa-image"></i></span>
+              <%= f.input_field :image_url, placeholder: "https://some_nice_image_found_on_google.jpg", class: "form-control" %>
+            </div>
+          </div>
+          <%= f.submit "Rehome this dino", class: "btn btn-primary btn-lg w-100 mt-2" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container mb-5">
+  <div class="row g-4">
+    <% @dinosaurs.each do |dinosaur| %>
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="dino-card shadow-sm">
+          <div class="dino-card__image" style="background-image: url('<%= dinosaur.image_url %>');">
+            <%= link_to dinosaur_path(dinosaur), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "dino-card__remove" do %>
+              <i class="fa-solid fa-trash"></i>
+            <% end %>
+          </div>
+          <div class="dino-card__body">
+            <h5 class="dino-card__name">
+              <i class="fa-solid fa-dragon me-2"></i><%= dinosaur.name %>
+            </h5>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
