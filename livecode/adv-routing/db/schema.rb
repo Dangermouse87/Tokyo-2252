@@ -10,14 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_07_09_110954) do
-  create_table "gardens", force: :cascade do |t|
-    t.string "banner_url"
-    t.datetime "created_at", null: false
-    t.string "name"
-    t.datetime "updated_at", null: false
-  end
-
+ActiveRecord::Schema[8.1].define(version: 2026_07_09_120337) do
   create_table "parks", force: :cascade do |t|
     t.string "banner_url"
     t.datetime "created_at", null: false

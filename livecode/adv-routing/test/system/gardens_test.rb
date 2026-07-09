@@ -1,43 +1,43 @@
 require "application_system_test_case"
 
-class GardensTest < ApplicationSystemTestCase
+class ParksTest < ApplicationSystemTestCase
   setup do
-    @garden = gardens(:one)
+    @park = parks(:one)
   end
 
   test "visiting the index" do
-    visit gardens_url
-    assert_selector "h1", text: "Gardens"
+    visit parks_url
+    assert_selector "h1", text: "Parks"
   end
 
-  test "should create garden" do
-    visit gardens_url
-    click_on "New garden"
+  test "should create park" do
+    visit parks_url
+    click_on "New park"
 
-    fill_in "Banner url", with: @garden.banner_url
-    fill_in "Name", with: @garden.name
-    click_on "Create Garden"
+    fill_in "Banner url", with: @park.banner_url
+    fill_in "Name", with: @park.name
+    click_on "Create Park"
 
-    assert_text "Garden was successfully created"
+    assert_text "Park was successfully created"
     click_on "Back"
   end
 
-  test "should update Garden" do
-    visit garden_url(@garden)
-    click_on "Edit this garden", match: :first
+  test "should update Park" do
+    visit park_url(@park)
+    click_on "Edit this park", match: :first
 
-    fill_in "Banner url", with: @garden.banner_url
-    fill_in "Name", with: @garden.name
-    click_on "Update Garden"
+    fill_in "Banner url", with: @park.banner_url
+    fill_in "Name", with: @park.name
+    click_on "Update Park"
 
-    assert_text "Garden was successfully updated"
+    assert_text "Park was successfully updated"
     click_on "Back"
   end
 
-  test "should destroy Garden" do
-    visit garden_url(@garden)
-    click_on "Destroy this garden", match: :first
+  test "should destroy Park" do
+    visit park_url(@park)
+    click_on "Destroy this park", match: :first
 
-    assert_text "Garden was successfully destroyed"
+    assert_text "Park was successfully destroyed"
   end
 end

@@ -1,6 +1,6 @@
 require "test_helper"
 
-class GardenTest < ActiveSupport::TestCase
+class DinosaursControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end

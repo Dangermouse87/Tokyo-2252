@@ -1,9 +1,13 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  Dinosaur: MyString
+  park: one
   name: MyString
-  banner_url: MyString
+  image_url: MyString
 
 two:
+  Dinosaur: MyString
+  park: two
   name: MyString
-  banner_url: MyString
+  image_url: MyString
